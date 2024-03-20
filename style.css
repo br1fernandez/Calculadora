@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s ease;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, rgb(86, 54, 199), rgb(60, 58, 60));
+}
+.contenedor {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.calculadora {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000;
+}
+
+.cambiar-tema {
+    position:absolute;
+    top:30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.cambiar-tema.activo {
+    color: #333;
+}
+
+.cambiar-tema.activo::before {
+    background-color: #fff;
+}
+
+.cambiar-tema::before {
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index: -1;
+}
+
+#pantalla-display {
+    margin: 0 10px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 30px;
+    overflow-x: scroll;
+}
+
+#pantalla-display::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+button:hover{
+    transform: scale(1.2);
+}
+
+button#igual{
+    height: 130px;
+}
+
+
+/* Calculadora clara*/
+
+.calculadora {
+    background-color: #fff;
+}
+
+.calculadora #pantalla-display {
+    color: #0a1e23;
+}
+
+.calculadora button#borrar {
+    background-color: #ffd5d8;
+    color: #fc4552;
+}
+
+.calculadora button.btn-numero {
+    background-color: #c3eaff;
+    color: #000;
+}
+
+.calculadora button.btn-operador {
+    background-color: #ffd0fd;
+    color: #f967f3;
+}
+
+.calculadora button.btn-igual{
+    background-color: #efb36f;
+}
+
+/* Calculadora oscura*/
+
+.calculadora.oscura{
+    background-color: #071115;
+}
+
+.calculadora.oscura #pantalla-display{
+    color: #f8fafd;    
+}
+
+.calculadora.oscura button#borrar{
+    background-color: #2d191e;
+    color: #bd3740;    
+}
+
+.calculadora.calculadora.oscura button.btn-numero{
+    background-color: #1b2f38;
+    color: #f8fafb;    
+}
+
+.calculadora.calculadora.oscura button.btn-operador{
+    background-color: #2e1f39;
+    color: #aa00a4;
+}
+
+.calculadora.calculadora.oscura button.btn-igual{
+    background-color: #223323;
+    color: #ffffff;
+}
